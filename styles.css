@@ -1,5 +1,232 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #353232;
+  padding: 0 32px;
+  height: 80px;
+  position: relative;
+}
+.logo-area {
+  width: 100px;
+}
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 32px;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 0 12px;
+  height: 40px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+  padding: 8px 0;
+  color: #353232;
+}
+
+.search-bar svg {
+  width: 22px;
+  height: 22px;
+  color: #353232;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.icons svg {
+  width: 24px;
+  height: 24px;
+}
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Horizontal menu styles */
+.navbar-menu {
+  background: #bdbdbd;
+  padding: 0 32px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.menu-icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 628px;
+  overflow: hidden;
+}
+
+.slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+.items-gallery {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 98vw;
+  padding: 30px;
+  height: 100vh;
+  gap: 20px;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.item img {
+  width: 335px;
+}
+.image-info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  color: white;
+}
+.item-btn {
+  padding: 15px;
+  width: 150px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+.video{
+    height: 200px;
+}
+@media (max-width: 900px) {
+  .slider {
+    display: none;
+  }
+  .landing {
+    background: url("https://cdn.najjareshop.com/najjarprofessionalsolutions.com/public/data/slideshow_mobile_images/9.jpg?v=79");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .navbar {
+    width: 100vw;
+  }
+  .icons svg {
+    width: 48px;
+    height: 48px;
+  }
+  .icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+  }
+
+  .menu-btn svg {
+    width: 48px;
+    height: 48px;
+  }
+  .search-bar {
+    display: none;
+    justify-content: space-around;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .image-info {
+    font-size: 1.5rem;
+  }
+  .item-btn {
+    padding: 10px;
+    width: 150px;
+    font-size: 1.2rem;
+  }
+  .item img {
+    width: 400px;
+  }
+  .items-gallery{
+    justify-content: center;
+  }
 }
